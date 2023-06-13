@@ -21,4 +21,19 @@ class SlmFinalApplicationTests {
 
     }
 
+    @Test
+    void usageTest(){
+
+        DigitsumController calculatorController = new DigitsumController();
+
+        int a = 1234;
+        calculatorController.digitSum(a);
+        int b = 456;
+        calculatorController.digitSum(b);
+
+        int result = calculatorController.usage();
+
+        assertEquals(2, result);
+    }
+
 }
